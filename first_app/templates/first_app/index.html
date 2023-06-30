@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}"> 
+
+</head>
+<body style="background-color: rgb(185, 173, 66);">
+
+    <h1 style="color: darkgreen;" >Learning technologies</h1>
+    <br>
+    <h2>Below you can find the access records form our models in our app</h2>
+    <br>
+    <div class="mtv">
+      {% if access_records %}
+      <table border="3" style="margin-left: 500px;">
+        <thead>
+          <th>Website Name</th>
+          <th>Date Accessed</th>
+        </thead>
+     
+
+      {% for acc in access_records %}
+      <tr>
+        <td>{{acc.name}}</td>
+        <td>{{acc.date}}</td>
+      </tr>
+        {% endfor%}
+      </table>
+      {% else %}
+      <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+
+    </div>
+    <!-- {{santhosh}} -->
+    <br>
+    <!-- <img src="{% static 'images/santhu.png' %}" alt="img not found"> -->
+</body>
+</html>

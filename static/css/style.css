@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+h1{
+    color: rgb(197, 131, 32);
+    font-style: italic;
+ }
+/* img{
+    margin: 100px 220px 100px 250px;
+    max-width: 30%;
+    max-height: 35%;
+    
+}  */
+
+table{
+    margin-left: 500px;
+}
